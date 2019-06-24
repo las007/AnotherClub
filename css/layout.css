@@ -1,0 +1,90 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*clearfix清除浮动 由父级清除*/
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+/*.wrap*/
+.wrap {
+    width: 1300px;
+    min-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.top {
+	width: 100%;
+    height: 62px;
+    background: #000;
+}
+
+.header {
+    height: 130px;
+    background: orange;
+}
+
+.slider {
+    width: 100%;
+    height: 290px;
+    margin: 0 auto;
+    background: pink;
+}
+
+.new {
+    height: 340px;
+    padding: 30px 0;
+    background: lightseagreen;
+}
+
+.hot {
+    height: 460px;
+    padding: 30px 0 0 0;
+    background-color: #102222;
+}
+
+.new_single {
+    height: 250px;
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.mv {
+    height: 350px;
+    padding: 30px 0;
+    background-color: cornflowerblue;
+}
+
+.new_album {
+    height: 250px;
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.topic {
+    height: 340px;
+    padding: 30px 0;
+    background-color: grey;
+}
+
+.footer {
+    margin: 90px 0 0 0;
+    background-color: #fff;
+    height: 350px;
+}
+
+

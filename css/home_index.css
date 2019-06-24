@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+header ul {padding: 50px; }
+header ul li {font-size: 40px; }
+header nav .right ul {width: 250px; height: 25px; }
+header nav .right ul li1 {float: left; font-size: 20px; margin-right: 20px; }
+header .left {width: 80px; text-align: center; background: rgba(213,199,200,0.5); box-shadow: 5px 5px 3px 2px #999 inset,-5px -5px 3px 2px #999 inset; }
+img {border-radius: 5px; }
+.try_0 img:hover {transform: scale(0.75); opacity: 0.5; border-radius: 50%; }
+.try_1 img:hover {width: 100px; height: 100px; opacity: 0.6; border-radius: 10%; border: 3px solid aqua; }
+.try_2 img:hover {border: 3px dashed green; }
+.try_3 {border-radius: 45%; box-shadow: 5px 5px #999 inset,-5px -5px 5px #999 inset; }
+.try_4 img:hover {transform: rotateY(150deg); }
+.new img:hover {box-shadow: 5px 5px #999,-5px -5px #999; }
+
+.try_1 {height: 480px; }
+.try_1 img {width: 100px; height: 100px; margin-top: 15px; float: left; }
+.try_1 ul {width: 1800px; height: 300px; margin: 0 auto; }
+.try_1 ul li {width: 250px; height: 150px; float: left; list-style-type: none; margin-left: 1%; }
+.try_3 img {width: 150px; margin-right: 30%; }
+
+.try_0 a,.try_1 a,.try_3 a,.try_4 a,.new a {text-decoration: none; color: black; }
+
+.try_0 ul,.try_3 ul,.try_4 ul,.new ul {width: 1700px; height: 300px; margin: 0 auto; }
+.try_0 ul li,.try_3 ul li,.try_4 ul li,.new ul li {width: 150px; float: left; list-style-type: none; margin-left: 1%; }
+.try_0 ul li p,.try_1 ul li p,.try_2 ul li p,.try_3 ul li p,.try_4 ul li p,.new ul li p {text-align: center; font-size: 12px; }

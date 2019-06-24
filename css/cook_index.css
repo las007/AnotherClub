@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+header {background-image: url("../img/wntj/wntj_topic/1.jpg"); background-repeat: no-repeat; background-position: center;  }
+header .box {width: 100%; background-color: #3C3334;}
+header .center {margin-left: 800px;}
+header .center input {border-radius: 5px; height: 35px; }
+header .new_0 {width: 280px; height: 325px; float: left; }
+header .new_0 ul {width: 80px; height: 30px; margin-left: 50px; background: rgba(213,199,200,0.5); box-shadow: 5px 5px 10px 2px #999 inset,-5px -5px 10px 2px #999 inset; }
+header .new_0 ul .pc {width: 50px; height: 20px; text-align: center; }
+header .new_0 ul li {margin-left: 0px; }
+header ul li {margin-left: 30px; }
+header aside {display: none;width: 380px; }
+header aside li {float: left; margin: 15px 25px; margin-left: 15px; width: 90px; }
+header .new_0 ul:hover aside {display: block; width: 250px; height: 250px; background: rgba(217,215,215,0.2); list-style-type: none; }
+
+header .pic {width: 1000px; height: 330px; position: relative; margin-left: 200px; }
+header ul h1 {padding-left: 18%; padding-top: 10%; color: greenyellow; }
+header ul p {padding-left: 14%; color: white; }
+header .pic ul {margin-left: 200px; }
+header .pic ul li .one { position: relative; transition: all 1.3s; top: -9650px; }
+header .pic ul li input {width: 100px; height: 30px; border-radius: 5%; opacity: 0.8; }
+header .pic ul li .two { position: relative; transition: all 1.3s; left: -9650px; }
+header .pic:hover ul li .one {position: absolute; left: 300px; top: 250px; background: rgba(205,199,199,0.5); width: 50px; border-radius: 10%; }
+header .pic:hover ul li .two {position: absolute; left: 500px; top: 250px; background: rgba(205,199,199,0.5); width: 50px; border-radius: 10%; }
+
+.try_0 ul,.try_1 ul,.try_2 ul {width: 1700px; height: 300px; margin: 0 auto; }
+.try_0 ul li,.try_1 ul li,.try_2 ul li {width: 150px; float: left; list-style-type: none; margin-left: 1%; }
+.try_0 ul li p,.try_1 ul li p,.try_2 ul li p {text-align: center; font-size: 12px; }
+
+

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {height: 420px; }
+header .box {width: 100%; background-color: #9A8787;}
+header .center {margin-left: 150px;}
+header .center input {border-radius: 5px; width: 700px; height: 35px; }
+header .center input:nth-child(2) {width: 50px; }
+header ul {margin-top: 50px; }
+header hr {margin-top: 20px; }
+
+.try_000 {width: 1300px; height: 2200px; margin: 0 auto; background: rgba(171,169,169,0.1); }
+
+.try_00 {width: 350px; height: 1000px; float: right; margin-top: 30px; background: rgba(206,199,199,0.5); margin-left: 50px; }
+.try_00 img {width: 100px; height: 180px; margin: 10%; }
+.try_00 .box {width: 350px; margin-top: 10px; }
+.try_00 .biaoqian {height: 90px; border-bottom: 1px dashed; }
+.try_00 .biaoqian ul {width: 310px; height: 100px; }
+.try_00 .biaoqian ul li {float: left; margin: 1px; background: rgba(171,169,169,0.2); }
+
+.try_0 {width: 900px; float: left; margin-top: 0px; }
+.try_0 .wrap {width: 1500px; height: 250px; overflow-x: auto; overflow-y: hidden; margin: 0 auto; margin-top: 30px; }
+.try_1 {width: 900px; float: left; margin-top: 0px; }
+.try_1 .wrap {width: 1800px; height: 250px; overflow-x: auto; overflow-y: hidden; margin: 0 auto; margin-top: 30px; }
+.try_2 {width: 900px; float: left; margin-top: 0px; }
+.try_2 .wrap {width: 2300px; height: 250px; overflow-x: auto; overflow-y: hidden; margin: 0 auto; margin-top: 30px; }
+.try_3 {width: 900px; height: 200px; float: left; margin-top: 15px; border-bottom: 1px dashed; }
+.try_3 img {float: left; margin: 10px;;}
+.try_3 p {text-indent: 2em;  }
+.try_3 a {text-decoration: none; }
+
+.box {float: left; width: 900px; }
+.box li {font-family: 华文行楷; font-size: 30px; }
+.box li a {margin-left: 10px; font-size: 18px; text-decoration: none; margin-top: 5px; }
+
+.footer {float: left; margin-top: 86px; }
+.footer .wrap { }
+.footer_bottom {margin-left: 270px; }
+.bottom {width: 1300px; float: left; line-height: 20px; margin-top: 15px; }

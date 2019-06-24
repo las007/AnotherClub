@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+header .box {width: 100%; background-color: #DFCFCF;}
+header .center {margin-left: 800px;}
+header .center input {border-radius: 5px; height: 35px; }
+header .inner ul li {float: left; margin-left: 0px; font-size: 23px; }
+
+.try_0,.try_1,.try_2 {margin-top: 30px; }
+
+.try_0 ul,.try_1 ul,.try_2 ul {width: 1700px; height: 300px; margin: 0 auto; }
+.try_0 ul li,.try_1 ul li,.try_2 ul li {width: 150px; float: left; list-style-type: none; margin-left: 1%; }
+.try_0 ul li p,.try_1 ul li p,.try_2 ul li p {text-align: center; font-size: 12px; }
+
+.bottom {margin-top: 0px; }
+

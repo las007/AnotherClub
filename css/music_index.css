@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {position: relative; }
+header video {position: absolute; width: 100%; }
+header .center {margin-left: 800px;}
+header .center input {border-radius: 5px; height: 35px; }
+header .zuo ul {list-style-type: none; width: 100px; height: 300px; margin: 0 auto; float: left; margin-top: 50px; }
+header .zuo ul li img {width: 20px; height: 20px; }
+header .zuo ul li {float: left; margin-left: 8%; display: block; }
+header .zuo ul li.you {position: absolute; width: 100px; height: 30px; margin-top: 50px; color: white; background: rgba(174,166,166,1.00); }
+header .zuo ul li.you aside {display: none; background: rgba(138,131,131,0.2); width: 250px; height: 300px; }
+header .you aside li{width: 95px; margin-right: 10px; }
+header .zuo ul li.you:hover aside {display: block; list-style-type: none; }
+header .zuo ul li.you aside span {width: 40px; height: 20px; float: left; margin: 0 10px; }
+
+header .pic {width: 800px; height: 420px; position: relative; margin-left: 250px; }
+header .pic ul {width: 250px; height: 100px; }
+header .pic ul li {width: 150px; height: 50px; position: relative; display: none; }
+header .pic ul li input {width: 150px; height: 40px; border-radius: 8%; }
+header .pic:hover ul li.one {position: absolute; left: 160px; top: 350px; background: rgba(182,182,182,0.5); height: 25px; display: block; }
+header .pic:hover ul li.two {position: absolute; left: 400px; top: 350px; background: rgba(191,189,189,0.5); height: 25px; display: block; }
+header .pic h1 {text-align: center; padding-top: 150px; color: aquamarine; font-family: 华文行楷; }
+
+header hr {margin-top: 20px; }
+
+#box {position: relative; color: white; margin-top: 150px; }
+.try_0 {position: relative; color: white; }
+.try_0 ul {list-style-type: none; width: 1200px; height: 400px; margin-left: 50px; }
+.try_0 ul li {position: relative; width: 200px; height: 200px; perspective: 250px; float: left; margin-right: 3%; }
+.try_0 ul li img {position: absolute; backface-visibility: hidden; transition: 0.5s; }
+.try_0 ul li:hover img.zheng {transform: rotateX(0deg); }
+.try_0 ul li img.fan {transform: rotateX(0deg); }
+.try_0 ul li:hover img.fan {transform: rotateX(-180deg); }
+
+.try_1 ul {width: 1300px; }
+.try_1 ul li {background-image: url("../img/Hi-Res/流行Hi-Res/4.jpg"); position: relative; width: 150px; height: 200px; float: left; margin-right: 10px; overflow: hidden; }
+.try_1 ul li:nth-child(2) {background-image: url("../img/movie/4.jpg"); }
+.try_1 ul li:nth-child(3) {background-image: url("../img/music/12.jpg"); }
+.try_1 ul li:nth-child(4) {background-image: url("../img/music/4.jpg"); }
+.try_1 ul li:nth-child(5) {background-image: url("../img/movie/4.jpg"); }
+.try_1 ul li:nth-child(6) {background-image: url("../img/music/12.jpg"); }
+.try_1 ul li:nth-child(7) {background-image: url("../img/music/4.jpg"); }
+.try_1 ul li aside {position: absolute; top: -250px; transition: 0.5s; }
+.try_1 ul li aside p {margin: 90px 50px; color: white; }
+.try_1 ul li:hover aside {top: 0; background: rgba(117,114,114,0.5); }
+
+.color {position: absolute; width: 100%; height: 150px; background: rgba(103,151,70,1.00); margin-top: 140px; }
+
+.try_2 ul {width: 1300px; height: 150px; list-style-type: none; margin: 0 auto;  }
+.try_2 ul li {position: relative; width: 100px; height: 200px; float: left; margin-right: 6%; }
+.try_2 ul li img {position: absolute; width: 150px; height: 150px; border: 5px solid #ccc; border-radius: 50%; }
+.try_2 ul li img.tu {transform: 0.5s; opacity: 0; }
+.try_2 ul li:hover img.tu {opacity: 1; transform: scale(0.8); }
+.try_2 ul li img.tihuan {transform: 0.5s; opacity: 1; }
+.try_2 ul li:hover img.tihuan {opacity: 0; }
+
+.try_3 {height: 220px; box-shadow: 5px 5px 50px 5px #999 inset,-5px -5px 50px 5px #999 inset; }
+.try_3 img {width: 250px; margin-top: 25px; }s
+.try_3 img:hover {height: 150px; opacity: 0.6; border-radius: 10%; border: 3px solid aqua; }
+
+

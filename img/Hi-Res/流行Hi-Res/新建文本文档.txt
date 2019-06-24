@@ -1,0 +1,24 @@
+['', 'The Thrill of It All(Sprcial Edition)', 'Sam Smith'],
+  
+['', 'Best Generation(International Edition)', 'GENERATIONS fron EXILE'],
+  
+['', 'Red Pill Blues(Deluxe)', 'Maroon5'],
+    
+['', '思い続ければ', '藤田麻衣子'],
+    
+['', '私は幸せ', '柴田 淳'],
+    
+['', 'BEST GENERATION', 'GENERATIONS from EXILE'],
+   
+['', '僕だけの君 ～Under Super Best～', '乃木坂46'],
+  
+['', '東京 - EP', '手嶌葵'],
+  
+['', 'いいわけ - EP', 'JUJU'],
+    
+['', 'ずっと、ふたりで - Single', '家入レオ'],
+    
+['', 'LIFE DIARY', 'FUKI'],
+    
+['', 'ココロノコエ` RECORDS', '丸本莉子'],
+   

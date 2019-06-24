@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Movie</title>
+	<link type="text/css" rel="stylesheet" href="css/index.css">
+	<link type="text/css" rel="stylesheet" href="css/movie_index.css">
+	<link type="text/css" rel="stylesheet" href="css/movie_new.css">
+</head>
+
+<body>
+
+<header>
+		<nav>
+			<div class="left" style="font-family: 华文行楷; font-size: 38px; color: aqua" >
+				<span>Movie</span>
+			</div>
+			<div class="center">
+				<form method="get" action="https://www.baidu.com/?tn=98012088_5_dg&ch=12" name="word" target="_blank">
+					<input type="text" name="word" placeholder="请输入影片名">
+					<input type="submit" value="搜索">
+				</form>
+			</div>
+	   </nav>
+	<hr>
+		    <ul>	
+				<li><a href="Home.html">首页</a></li>	        
+				<li><a href="Music.html">Music</a></li>
+				<li><a href="Book.html">Book</a></li>
+				<li><a href="Movie.html">Movie</a></li>s
+			</ul>
+		<hr>
+		
+	<div class="box_new" id="box_100">
+    <div class="inner">
+
+        <!--轮播图-->s
+
+        <ul>
+             <li><a href="#"><img src="../images/1.jpg" alt=""></a></li>
+             <li><a href="#"><img src="../images/2.jpg" alt=""></a></li>
+			 <li><a href="#"><img src="../images/3.jpg" alt=""></a></li>
+			 <li><a href="#"><img src="../images/4.jpg" alt=""></a></li>
+			 <li><a href="#"><img src="../images/5.jpg" alt=""></a></li>
+        </ul>
+
+        <ol class="bar">
+
+        </ol>
+
+        <!--左右焦点-->
+
+        <div id="arr">
+                    <span id="left">
+                        <
+                    </span>
+            <span id="right">
+                        >
+                    </span>
+        </div>
+
+    </div>
+
+</div>
+		<div class="you">
+			<ul>
+				<li><a href="#">高清</a></li>
+				<li><a href="#">热门电影</a></li>
+				<li><a href="#">高分</a></li>
+				<li><a href="#">推荐</a></li>
+				<li><a href="#">院系热映</a></li>
+				<li><a href="#">动画</a></li>
+				<li><a href="#">冷门佳片</a></li>
+				<li><a href="#">传记</a></li>
+				<li><a href="#">科幻</a></li>
+				<li><a href="#">情节</a></li>
+				<li><a href="#">动作</a></li>
+				<li><a href="#">恐怖</a></li>
+			</ul>
+		</div>
+<script>	
+    /**
+
+     *
+
+     * @param id  传入元素的id
+
+     * @returns {HTMLElement | null}  返回标签对象，方便获取元素
+
+     */
+
+    function my$(id) {
+
+        return document.getElementById(id);
+
+    }
+
+    //获取各元素，方便操作
+    var box=my$("box_100");
+
+    var inner=box_100.children[0];
+
+    var ulObj=inner.children[0];
+
+    var list=ulObj.children;
+
+    var olObj=inner.children[1];
+
+    var arr=my$("arr");
+
+    var imgWidth=inner.offsetWidth;
+
+    var right=my$("right");
+
+    var pic=0;
+
+    //根据li个数，创建小按钮
+
+    for(var i=0;i<list.length;i++){
+
+        var liObj=document.createElement("li");
+
+        olObj.appendChild(liObj);
+        liObj.innerText=(i+1);
+        liObj.setAttribute("index",i);
+
+        //为按钮注册mouseover事件
+
+        liObj.onmouseover=function () {
+
+            //先清除所有按钮的样式
+
+            for (var j=0;j<olObj.children.length;j++){
+
+                olObj.children[j].removeAttribute("class");
+
+            }
+
+            this.className="current";
+            pic=this.getAttribute("index");
+            animate(ulObj,-pic*imgWidth);
+        }
+    }
+
+    //设置ol中第一个li有背景颜色
+
+    olObj.children[0].className = "current";
+
+    //克隆一个ul中第一个li,加入到ul中的最后=====克隆
+
+    ulObj.appendChild(ulObj.children[0].cloneNode(true));
+
+    var timeId=setInterval(onmouseclickHandle,20000);
+
+    //左右焦点实现点击切换图片功能
+
+    box.onmouseover=function () {
+        arr.style.display="block";
+        clearInterval(timeId);
+    };
+
+    box.onmouseout=function () {
+        arr.style.display="none";
+        timeId=setInterval(onmouseclickHandle,3000);
+    };
+	
+
+    right.onclick=onmouseclickHandle;
+    function onmouseclickHandle() {
+        //如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,
+        //所以,如果用户再次点击按钮,用户应该看到第二个图片
+
+        if (pic == list.length - 1) {
+
+            //如何从第6个图,跳转到第一个图
+            pic = 0;//先设置pic=0
+            ulObj.style.left = 0 + "px";//把ul的位置还原成开始的默认位置
+
+        }
+
+        pic++;//立刻设置pic加1,那么此时用户就会看到第二个图片了
+
+        animate(ulObj, -pic * imgWidth);//pic从0的值加1之后,pic的值是1,然后ul移动出去一个图片
+        //如果pic==5说明,此时显示第6个图(内容是第一张图片),第一个小按钮有颜色,
+
+        if (pic == list.length - 1) {
+
+            //第五个按钮颜色干掉
+            olObj.children[olObj.children.length - 1].className = "";
+            //第一个按钮颜色设置上
+            olObj.children[0].className = "current";
+        } else {
+
+            //干掉所有的小按钮的背景颜色
+
+            for (var i = 0; i < olObj.children.length; i++) {
+
+                olObj.children[i].removeAttribute("class");
+
+            }
+
+            olObj.children[pic].className = "current";
+
+        }
+
+    }
+
+    left.onclick=function () {
+
+        if (pic==0){
+            pic=list.length-1;
+            ulObj.style.left=-pic*imgWidth+"px";
+        }
+
+        pic--;
+        animate(ulObj,-pic*imgWidth);
+        for (var i = 0; i < olObj.children.length; i++) {
+            olObj.children[i].removeAttribute("class");
+
+        }
+
+        //当前的pic索引对应的按钮设置颜色
+
+        olObj.children[pic].className = "current";
+    };
+
+ 
+    //设置任意的一个元素,移动到指定的目标位置
+
+    function animate(element, target) {
+
+        clearInterval(element.timeId);
+        //定时器的id值存储到对象的一个属性中
+        element.timeId = setInterval(function () {
+            //获取元素的当前的位置,数字类型
+            var current = element.offsetLeft;
+            //每次移动的距离
+            var step = 100;
+            step = current < target ? step : -step;
+            //当前移动到位置
+            current += step;
+            if (Math.abs(current - target) > Math.abs(step)) {
+                element.style.left = current + "px";
+
+            } else {
+
+                //清理定时器
+
+                clearInterval(element.timeId);
+
+                //直接到达目标
+
+                element.style.left = target + "px";
+            }
+        }, 10);
+    }
+
+</script>
+</header>
+
+		<div class="box" id="box">
+		<ul>
+	<li>院线/热映</li>
+	<li><a href="Music.html">更多...</a></li>
+		</ul><hr>
+	</div>
+<div class="try_0">
+	<div class="wrap">
+		<ul>
+	<li><img src="img/concertFilms/1.jpg" alt=""><p>Rebel Heart Tour！</p></li>
+	<li><img src="img/concertFilms/2.jpg" alt=""><p>Can\'t Stop Won\'t Stop: <br> A Bad Boy Story</p></li>
+	<li><img src="img/concertFilms/3.jpg" alt=""><p>The Best Damn Tour – Live in <br> Toronto'</p></li>
+	<li><img src="img/concertFilms/4.jpg" alt=""><p>2017 Oscar Nominated Shorts <br> Films - Live Action</p></li>
+	<li><img src="img/concertFilms/5.jpg" alt=""><p>RAMMSTEIN: PARIS</p></li>
+	<li><img src="img/concertFilms/6.jpg" alt=""><p>Newsies: The Broadway Musical</p></li>
+	<li><img src="img/concertFilms/7.jpg" alt=""><p>The Beatles: Eight Days <br> a Week - The Touring Years</p></li>
+    <li><img src="img/concertFilms/8.jpg" alt=""><p>Sinfonia Pop</p></li>
+    <li><img src="img/concertFilms/9.jpg" alt=""><p>既然青春留不住 <br> 还是做个大叔好</p></li>
+	<li><img src="img/concertFilms/10.jpg" alt=""><p>Oasis: Supersonic</p></li>
+		</ul>
+	</div>
+</div>	
+		<div class="box">
+		<ul>
+	<li>科幻</li>
+	<li><a href="Music.html">更多...</a></li>
+		</ul><hr>
+	</div>
+<div class="try_1">
+	<div class="wrap">
+		<ul>
+	<li><img src="img/actionFilms/1.jpg" alt=""><p>The Hurricane Heist</p></li>
+	<li><img src="img/actionFilms/2.jpg" alt=""><p>Death Wish</p></li>
+	<li><img src="img/actionFilms/3.jpg" alt=""><p>Tomb Raider！</p></li>
+	<li><img src="img/actionFilms/4.jpg" alt=""><p>Batman NinJa</p></li>
+	<li><img src="img/actionFilms/5.jpg" alt=""><p>Black Panther</p></li>
+	<li><img src="img/actionFilms/6.jpg" alt=""><p>Maze Runner: The Death Cure</p></li>
+	<li><img src="img/actionFilms/7.jpg" alt=""><p>DCU: Suicide Squad - Hell to Pay</p></li>
+    <li><img src="img/actionFilms/8.jpg" alt=""><p>The Commuter</p></li>
+    <li><img src="img/actionFilms/9.jpg" alt=""><p>I Kill Giants</p></li>
+    <li><img src="img/actionFilms/10.jpg" alt=""><p>Children of Heaven</p></li>
+		</ul>
+	</div>
+</div>
+		<div class="box">
+		<ul>
+	<li>经典</li>
+	<li><a href="Music.html">更多...</a></li>
+		</ul><hr>
+	</div>
+<div class="try_2">
+	<div class="wrap">
+		<ul>
+	<li><img src="img/classicFilms/1.jpg" alt=""><p>Mary Poppins</p></li>
+	<li><img src="img/classicFilms/2.jpg" alt=""><p>No Country for Old Men</p></li>
+	<li><img src="img/classicFilms/3.jpg" alt=""><p>The Palm Beach Story</p></li>
+	<li><img src="img/classicFilms/4.jpg" alt=""><p>Children of Heaven</p></li>
+	<li><img src="img/classicFilms/5.jpg" alt=""><p>Jumanji</p></li>
+	<li><img src="img/classicFilms/6.jpg" alt=""><p>Sabrina</p></li>
+	<li><img src="img/classicFilms/7.jpg" alt=""><p>Roman Holiday</p></li>
+    <li><img src="img/classicFilms/8.jpg" alt=""><p>Young Mr. Lincoln</p></li>
+    <li><img src="img/classicFilms/9.jpg" alt=""><p>Becket</p></li>
+    <li><img src="img/classicFilms/10.jpg" alt=""><p>The Loneliness of the Long <br> Distance Runner</p></li>
+		</ul>
+	</div>	
+</div>
+		<div class="box">
+		<ul>
+	<li>冷门佳片</li>
+	<li><a href="Music.html">更多...</a></li>
+		</ul><hr>
+	</div>
+<div class="try_3">
+	<div class="wrap">
+	<img src="img/sliderPic/17.jpg" alt="">
+	<img src="img/sliderPic/18.jpg" alt="">
+	<img src="img/sliderPic/19.jpg" alt="">
+	<img src="img/sliderPic/20.jpg" alt="">
+	<img src="img/sliderPic/21.jpg" alt="">
+	<img src="img/sliderPic/22.jpg" alt="">
+	<img src="img/sliderPic/23.jpg" alt="">
+	<img src="img/sliderPic/24.jpg" alt="">
+	<img src="img/sliderPic/25.jpg" alt="">
+	<img src="img/sliderPic/26.jpg" alt="">
+	</div>	
+</div>
+	
+		<div class="footer" id="footer">
+    <div class="wrap">
+        <div class="footer_menu">iTunes Plus Club > Footer Menu</div>
+        <div class="footer_content">
+            <div class="footer-box">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#1">Music</a></li>
+                    <li><a href="#1">Movie</a></li>
+                    <li><a href="#1">Book</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#1">Album</a></li>
+                    <li><a href="#1">EP</a></li>
+                    <li><a href="#1">Single</a></li>
+                    <li><a href="#1">Music Video</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h4>Music Genres</h4>
+                <ul>
+                    <li><a href="#1">Alternative</a></li>
+                    <li><a href="#1">Blue</a></li>
+                    <li><a href="#1">Country</a></li>
+                    <li><a href="#1">Christian & Gospel</a></li>
+                    <li><a href="#1">Dance</a></li>
+                    <li><a href="#1">Electronic</a></li>
+                    <li><a href="#1">Hip-Hop/Rap</a></li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <ul>
+                    <li><a href="#1">Jazz</a></li>
+                    <li><a href="#1">Latino</a></li>
+                    <li><a href="#1">New Age</a></li>
+                    <li><a href="#1">Pop</a></li>
+                    <li><a href="#1">Rock</a></li>
+                    <li><a href="#1">R&B</a></li>
+                    <li><a href="#1">Singer/Songwriter</a></li>
+                    <li><a href="#1">Soundtrack</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bottom">Copyright©2018 All Rights Reserved</div>
+    </div>
+
+</div>
+<div class="bottom">
+	<p>@banquan</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,.footer {background: rgb(56,56,56); }
+
+header { background: rgba(55,46,46,0.8); }
+header .center {margin-left: 800px;}
+header .center input {border-radius: 5px; height: 35px; }
+header .center input:nth-child(2) {width: 50px; }
+header ul {margin-top: 40px; }
+header .you {width: 500px; height: 300px; float: left; margin-left: 100px; }
+header .you ul {width: 400px; height: 200px; border: 2px solid rgba(213,213,213,1.00); margin: 70px 100px; }
+header .you ul li {width: 95px; height: 50px; }
+header .you ul li a {color: aliceblue; }
+
+.try_0 ul,.try_1 ul,.try_2 ul,.try_3 ul,.try_4 ul,.new ul {width: 2225px; height: 300px; margin: 0 auto; }
+.try_0 ul li,.try_1 ul li,.try_2 ul li,.try_3 ul li,.try_4 ul li,.new ul li {width: 200px; float: left; list-style-type: none; margin-right: 1%; }
+.try_0 ul li p,.try_1 ul li p,.try_2 ul li p,.try_3 ul li p,.try_4 ul li p,.new ul li p {text-align: center; font-size: 15px; color: aliceblue; }
+
+.try_0,.try_1,.try_2{height: 390px; }
+.try_0 img,.try_1 img,.try_2 img {width: 200px; height: 297px; border-radius: 5px; }
+.try_3 {height: 250px; }
+.try_3 img {height: 190px; margin-right: 1%; border-radius: 5px; }
+
+.box {color: aliceblue; }
+
+/*footer 样式设置*/
+.footer {
+    color: #dddedd;
+    background-color: #383838;
+	margin-top: 80px;
+}
+
+.footer .footer_content .footer-box ul li a {
+    color: #dddedd;
+    font-size: 14px;
+}
+.bottom {margin-top: 30px; }

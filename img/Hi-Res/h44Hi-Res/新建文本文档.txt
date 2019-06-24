@@ -1,0 +1,24 @@
+['', 'The Thrill of It All (Special Edition)', 'Sam Smith'],
+  
+['', 'Red Pill Blues (Deluxe)', 'Maroon 5'],
+  
+['', '┬│▒Ў╦╣╠╣г║50 Masterworks', 'Arthur Rubinstein'],
+    
+['', 'е╖еєе╗елед', 'Hello Sleepwalkers'],
+    
+['', 'елеьеєе└й`д╬е│еде╙е╚', 'щк╠яБД╥┬─╬'],
+    
+['', 'Rest', 'Charlotte Gainsbourg'],
+   
+['', 'I', '│┬░╪╙ю'],
+  
+['', 'TVеве╦есб║SHOW BY ROCK!!б╗OST Plus 2', 'Various Artists'],
+  
+['', 'TVеве╦есб║╡╢ДЗ┬╥╬ш-╗и═ш-б╗екеъе╕е╩еы?е╡ежеєе╔е╚еще├еп', ''],
+    
+['', '??? ?? (KBS2 ?????) OST - Part.10', 'XIA (??)'],
+    
+['', '??? ?? (KBS2 ?????) OST - Part.9', '?????'],
+    
+['', '??? ?? (KBS2 ?????) OST - Part.8', 'SG???'],
+   
